@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: "meter-converter"
+
+server:
+  port: 8082
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8765/eureka
+    fetch-registry: false #False: To do not look for others ms.
+    register-with-eureka: true #False: To do not register in the service registry.
+  instance:
+    lease-renewal-interval-in-seconds: 5 #It's the time gap that this ms advice to the service registry that it's still up.
